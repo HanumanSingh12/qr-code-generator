@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        
+        <div class="input-group">
+            <label for="textInput">Enter Text or URL:</label>
+            <input type="text" id="textInput" placeholder="https://example.com or any text">
+        </div>
+
+        <div class="options">
+            <div class="option-group">
+                <label for="sizeInput">Size (pixels):</label>
+                <input type="number" id="sizeInput" value="300" min="100" max="1000">
+            </div>
+            <div class="option-group">
+                <label for="colorInput">QR Code Color:</label>
+                <input type="color" id="colorInput" value="#000000">
+            </div>
+        </div>
+
+        <button onclick="generateQR()">Generate QR Code</button>
+
+        <div id="qrContainer" class="qr-container hidden">
+            <canvas id="qrcode"></canvas>
+            <button class="download-btn" onclick="downloadQR()">Download QR Code</button>
+        </div>
+
+        <div class="examples">
+            <h3>Quick Examples:</h3>
+            <ul>
+                <li onclick="fillExample('https://www.google.com')">• Google</li>
+                <li onclick="fillExample('https://www.github.com')">• GitHub</li>
+                <li onclick="fillExample('mailto:contact@example.com')">• Email</li>
+                <li onclick="fillExample('tel:+1234567890')">• Phone Number</li>
+                <li onclick="fillExample('Hello World!')">• Simple Text</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
