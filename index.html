@@ -15,7 +15,6 @@
             <label for="textInput">Enter Text or URL:</label>
             <input type="text" id="textInput" placeholder="https://example.com or any text">
         </div>
-
         <div class="options">
             <div class="option-group">
                 <label for="sizeInput">Size (pixels):</label>
@@ -26,14 +25,11 @@
                 <input type="color" id="colorInput" value="#000000">
             </div>
         </div>
-
         <button onclick="generateQR()">Generate QR Code</button>
-
         <div id="qrContainer" class="qr-container hidden">
             <canvas id="qrcode"></canvas>
             <button class="download-btn" onclick="downloadQR()">Download QR Code</button>
         </div>
-
         <div class="examples">
             <h3>Quick Examples:</h3>
             <ul>
